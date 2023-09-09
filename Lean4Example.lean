@@ -1,13 +1,12 @@
 import Mathlib.Data.Nat.Prime
 import Mathlib.Data.Nat.Factorial.Basic
+def hello := "world"
+
 
 open Nat
-
 namespace Nat
 
-
 def build_bigger_prime (n: Nat) : Nat := minFac ( Nat.factorial n + 1)
-
 
 theorem infinite_primes (n : ℕ) : ∃ p, n ≤ p ∧ Prime p :=
   let p := build_bigger_prime n
